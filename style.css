@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+:root{--bg:#fff6fa;--pink:#ff4f87;--deep:#d82d68;--text:#4a2635;--muted:#85616e;--card:#ffffffd9}
+html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+body{background:radial-gradient(circle at 20% 10%,#ffd9e6 0,transparent 30%),radial-gradient(circle at 90% 90%,#ffe2ec 0,transparent 35%),var(--bg);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#ff7da7 1px,transparent 1px);background-size:28px 28px;opacity:.14}
+.hearts:before,.hearts:after{content:"♡";position:fixed;color:#ff80a9;font-size:70px;opacity:.16;animation:float 8s ease-in-out infinite;pointer-events:none}
+.hearts:before{left:6%;top:15%}.hearts:after{right:8%;bottom:12%;animation-delay:2s}
+@keyframes float{50%{transform:translateY(-22px) rotate(8deg)}}
+.shell{width:min(980px,92%);margin:0 auto;position:relative;z-index:1}
+.entrance{text-align:center;padding:12vh 0 7vh}
+.page{padding:6vh 0 8vh}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:.72rem;color:var(--deep);font-weight:800;margin-bottom:12px}
+h1{font-family:Georgia,serif;font-size:clamp(2.5rem,7vw,5rem);line-height:1.02;margin:0 0 18px;color:#3c1d2a}
+.lead{max-width:620px;margin:auto;font-size:1.08rem;line-height:1.8;color:var(--muted)}
+.divider{color:var(--pink);font-size:2rem;margin:25px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.card{display:block;text-align:left;text-decoration:none;color:inherit;background:var(--card);border:1px solid #fff;border-radius:26px;padding:26px;box-shadow:0 15px 45px #d93f7020;backdrop-filter:blur(10px);transition:.25s}
+.card:hover{transform:translateY(-7px);box-shadow:0 22px 55px #d93f7030}
+.card.special{border-color:#ffc0d2}
+.icon{font-size:2.3rem}.card h2{margin:15px 0 8px;font-family:Georgia,serif}.card p{line-height:1.6;color:var(--muted);font-size:.95rem}.arrow{color:var(--deep);font-weight:800;font-size:.85rem}
+.tiny{margin-top:32px;color:#a37b88;font-size:.8rem}
+.back{display:inline-block;color:var(--deep);text-decoration:none;font-weight:700;margin-bottom:35px}
+.letter{max-width:780px;margin:25px auto;background:#fffdfedb;border-radius:28px;padding:32px;box-shadow:0 15px 45px #d93f7016;border:1px solid #fff;line-height:1.9;font-size:1.03rem}
+.letter p{margin:0 0 18px}.signature{color:var(--deep);font-weight:700}
+.next{display:block;width:max-content;margin:28px auto 0;padding:13px 20px;border-radius:999px;background:#3c1d2a;color:white;text-decoration:none;font-weight:700}
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:25px 0}
+.photo-grid img,.photo-single img,.proposal-photo img{width:100%;height:100%;object-fit:cover;border-radius:22px;display:block}
+.photo-grid img{height:250px}
+.photo-single{max-width:520px;margin:25px auto}.photo-single img{max-height:600px}
+.proposal{text-align:center;padding:5vh 0 9vh}
+.proposal .back{display:block;text-align:left}
+.proposal-photo{width:min(320px,78vw);height:410px;margin:0 auto 28px;border-radius:34px;padding:7px;background:linear-gradient(135deg,#fff,#ffc1d5,#fff);box-shadow:0 25px 65px #d93f7040}
+.proposal-photo img{border-radius:28px}
+.proposal-text{font-size:1.08rem;color:var(--muted)}.proposal-text.big{font-family:Georgia,serif;font-size:2rem;color:#3c1d2a;font-weight:700;margin:18px 0}.sub{font-size:.9rem;color:#987583}
+.buttons{display:flex;justify-content:center;gap:15px;margin-top:30px}
+button,.telegram{border:0;border-radius:999px;padding:15px 29px;font-weight:800;font-size:1rem;cursor:pointer;text-decoration:none;display:inline-block}
+.yes{background:var(--pink);color:white;box-shadow:0 12px 30px #ff4f8745}.no{background:#fff;color:#6e4c58;border:1px solid #efd6df}
+.please{min-height:35px;margin-top:20px;color:var(--deep);font-weight:800}
+.success{padding:10vh 0}.success-heart{font-size:5rem;animation:pulse 1.2s infinite}@keyframes pulse{50%{transform:scale(1.15)}}.success p{font-size:1.1rem;color:var(--muted)}.success .big{font-family:Georgia,serif;font-size:1.55rem;color:#3c1d2a}.success .small{max-width:550px;margin:15px auto 28px;line-height:1.7;font-size:.95rem}.telegram{background:#229ed9;color:#fff}
+@media(max-width:760px){.cards{grid-template-columns:1fr}.entrance{padding-top:9vh}.card{text-align:center}.photo-grid{grid-template-columns:repeat(2,1fr)}.photo-grid img{height:220px}.letter{padding:23px;font-size:.98rem}h1{font-size:3rem}}

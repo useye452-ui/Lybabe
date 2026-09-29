@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Mussu — One Real Question ❤️</title><link rel="stylesheet" href="style.css">
+</head>
+<body><div class="hearts"></div>
+<main class="shell proposal">
+  <a class="back" href="index.html">← Home</a>
+  <div class="eyebrow">Page 03 • The one thing I actually want</div>
+
+  <div class="proposal-photo"><img src="assets/photo6.jpg" alt="Mussu"></div>
+
+  <p class="eyebrow">Mussu, listen carefully...</p>
+  <h1>I don't want just a<br><span style="color:#d82d68">“girlfriend.”</span></h1>
+
+  <div class="letter" style="text-align:left">
+    <p>I want <strong>you.</strong></p>
+    <p>Not a relationship just for a name. Not something temporary. I want the person behind your calls, your messages, your little fights, your random talks and all those tiny things that somehow became so important to me.</p>
+    <p>Somewhere between all our conversations and all our stupid arguments, <strong>you became my favourite person.</strong></p>
+    <p>And now I don't want to keep wondering what we could be. I want to give us a real chance — if you want that too.</p>
+    <p class="signature">So Mussu... this isn't me asking for a label.<br>This is me asking if you'll choose <em>us</em>. ❤️</p>
+  </div>
+
+  <p class="proposal-text big">Will you be mine? ❤️</p>
+  <p class="sub">Not because I want to force an answer — because I want the answer to come from your heart.</p>
+
+  <div class="buttons" id="buttons">
+    <button class="yes" id="yesBtn">YES — CHOOSE US ❤️</button>
+    <button class="no" id="noBtn">Let me think...</button>
+  </div>
+
+  <div id="please" class="please" aria-live="polite"></div>
+</main>
+<script>
+const noBtn = document.getElementById("noBtn");
+const yesBtn = document.getElementById("yesBtn");
+const please = document.getElementById("please");
+
+const lines = [
+  "Ek baar aur soch lo, Mussu... 🥺",
+  "Please, agar dil mein thoda sa bhi 'us' hai... ❤️",
+  "No pressure... bas ek baar dil se sochna. 🫶",
+  "Kya hum dono ko ek real chance mil sakta hai? 🥹",
+  "Main yahin hoon... whenever you're ready. ❤️",
+  "Mussu, choose what your heart actually wants. 🫶"
+];
+let n = 0;
+
+noBtn.addEventListener("click", () => {
+  please.textContent = lines[n % lines.length];
+  n++;
+  noBtn.animate([
+    {transform:"translateX(0)"},
+    {transform:"translateX(-7px)"},
+    {transform:"translateX(7px)"},
+    {transform:"translateX(0)"}
+  ], {duration:260});
+});
+
+yesBtn.addEventListener("click", () => {
+  document.querySelector(".proposal").innerHTML = `
+    <div class="success">
+      <div class="success-heart">❤️</div>
+      <div class="eyebrow">Mussu said YES</div>
+      <h1>Love you too yaar😭😭 ❤️</h1>
+      <p>Ab se hum dono, ek saath. ❤️</p>
+      <p class="big">I didn't want just a girlfriend.<br>I wanted someone who feels like <strong>home.</strong></p>
+      <p class="small">And I'm really happy that person is you.<br>Your Telegram message will already be written for you. ❤️</p>
+      <a class="telegram" id="telegramBtn" href="https://t.me/mikasafks?text=I%20tapped%20YES%20babe%20%F0%9F%98%AD%F0%9F%98%AD">💌 Tell Toxic I said YES ❤️</a>
+    </div>`;
+});
+</script>
+</body></html>
